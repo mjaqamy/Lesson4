@@ -8,4 +8,7 @@ const yourName: string = "Юля";
 
 if (text.includes(yourName)) {
   console.log(text.toLowerCase());
+} else {
+  const newText = text.slice(0, text.indexOf(name)) + yourName + text.slice(text.indexOf(name) + name.length);
+  console.log(newText.toLowerCase());
 }
