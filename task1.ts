@@ -13,5 +13,7 @@ if (text.includes(yourName)) {
 
   const newText = text.slice(0, nameIndex) + yourName + text.slice(nameIndex + name.length);
 
+  const indexName = text.indexOf(name);
+  const newText = text.slice(0, indexName) + yourName + text.slice(indexName + name.length);
   console.log(newText.toLowerCase());
 }
