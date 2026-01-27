@@ -1,13 +1,15 @@
 //Вывести сегодняшнюю дату в формате:
 //День/Месяц/Год Часы:Минуты:Секунду - Например 02/05/2026 22:15:30
+const now: Date = new Date();
 
-const dateNow = new Date();
+const day = now.getDate().toString().padStart(2, "0");
+const month = (now.getMonth() + 1).toString().padStart(2, "0");
+const year = now.getFullYear();
 
-const day = dateNow.getDate().toString().padStart(2, "0");
-const month = (dateNow.getMonth() + 1).toString().padStart(2, "0");
-const year = dateNow.getFullYear().toString().padStart(2, "0");
-const hours = dateNow.getHours().toString().padStart(2, "0");
-const min = dateNow.getMinutes().toString().padStart(2, "0");
-const sec = dateNow.getSeconds().toString().padStart(2, "0");
+const hours = now.getHours().toString().padStart(2, "0");
+const minutes = now.getMinutes().toString().padStart(2, "0");
+const seconds = now.getSeconds().toString().padStart(2, "0");
 
-console.log(`${day}/${month}/${year} ${hours}:${min}:${sec}`);
+const formattedDate = `${day}/${month}/${year} ${hours}:${minutes}:${seconds}`;
+
+console.log(formattedDate);
