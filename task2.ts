@@ -8,5 +8,5 @@ const newNum = num1 + num2;
 if (Number.isInteger(newNum)) {
   console.log(newNum);
 } else {
-  console.log(newNum.toFixed(0));
+  console.log(newNum.toFixed());
 }
