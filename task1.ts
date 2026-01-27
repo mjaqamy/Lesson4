@@ -1,8 +1,17 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 const name: string = "Александр";
 
 const text: string = `Я, ${name}, учу TYPESCRIPT`;
 
 //Написать программу, которая выводит text в нижнем регистре с вашим именем, если имя не совпадает, то заменить его
 
-const yourName: string = "Настя";
+const yourName: string = "Юля";
+
+if (text.includes(yourName)) {
+  console.log(text.toLowerCase());
+} else {
+  const nameIndex = text.indexOf(name);
+
+  const newText = text.slice(0, nameIndex) + yourName + text.slice(nameIndex + name.length);
+
+  console.log(newText.toLowerCase());
+}
